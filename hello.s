@@ -1,13 +1,16 @@
+.arch armv8-a
+.cpu cortex-a53
+
 .data
 
 msg:
-    .ascii "Hello, World\n"
+    .ascii "Hello, ASM World\n"
     len = . - msg
 
 .text
 
-.globl _start
-_start:
+.globl _aaa
+_aaa:
     mov x0, #1
     ldr x1, =msg
     ldr x2, =len
